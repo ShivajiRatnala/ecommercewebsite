@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static  'signup.css' %}">
+</head>
+<body>
+<div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h2>Logo</h2>
+            <div class="user">
+                <label>Username:</label><br>
+                <input type="text" placeholder="Username" id="user" name="username" ><br>
+            </div>
+            <div class="user">
+                <label>Password:</label><br>
+                <input type="password" placeholder="password" id="passkey" name="password"><br>
+            </div>
+            <div class="user">
+                <label>E-mail:</label><br>
+                <input type="email" placeholder="Email Address" id="mail" name="Email"><br>
+            </div>
+            <div class="user">
+                <label>mobilenumber:</label><br>
+                <input type="number" placeholder="Mobile number" id="mobile" name="MobileNumber">
+            </div>
+            <input type="submit" value="submit" id="submit">
+        </form>
+        <p>Already exit account &nbsp;<a href="#">Login</a></p>
+    </div>
+</body>
+</html>

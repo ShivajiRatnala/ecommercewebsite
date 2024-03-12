@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static  'login.css' %}">
+</head>
+<body>
+<div class="container">
+        <form method="post">
+            {% csrf_token %}
+            <h2>Logo</h2>
+            <div class="user">
+                <label class="required">mobilenumber:</label><br>
+                <input type="number" placeholder="Mobile number" id="mobile" name="MobileNumber">
+            </div>
+            <input type="submit" value="Login" id="submit">
+        </form>
+        <p>Create Account &nbsp;<a href="#">Signup</a></p>
+    </div>
+</body>
+</html>
